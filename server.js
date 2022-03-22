@@ -11,12 +11,11 @@ const app = express();
 app.use(express.json())
 
 
-app.get('/', (req, res) => {
+app.get('/',  (req, res) => {
     res.send('hello world')
 })
 
 const postsRoutes = require('./routes/posts.routes');
-const { default: mongoose } = require("mongoose");
 app.use('/posts', postsRoutes)
 
 app.listen(process.env.PORT)
