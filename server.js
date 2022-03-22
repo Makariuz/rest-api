@@ -4,6 +4,10 @@ dotenv.config()
 
 const app = express();
 
+//making our server accept json requests
+app.use(express.json())
+
+
 app.get('/', (req, res) => {
     res.send('hello world')
 })
