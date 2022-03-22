@@ -12,4 +12,7 @@ app.get('/', (req, res) => {
     res.send('hello world')
 })
 
+const postsRoutes = require('./routes/posts.routes')
+app.use('/posts', postsRoutes)
+
 app.listen(process.env.PORT)
