@@ -18,4 +18,7 @@ app.get('/',  (req, res) => {
 const postsRoutes = require('./routes/posts.routes');
 app.use('/posts', postsRoutes)
 
+const authRoutes = require('./routes/auth.routes');
+app.use('/auth', authRoutes)
+
 app.listen(process.env.PORT)
